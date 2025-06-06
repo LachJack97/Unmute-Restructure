@@ -9,9 +9,9 @@ export default function Index() {
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session && session.user) {
-        router.replace('/Chat');
+        router.replace('/chat');
       } else {
-        router.replace('/Login');
+        router.replace('/login');
       }
     });
   }, [router]);

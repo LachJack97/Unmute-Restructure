@@ -19,7 +19,7 @@ export default function ChatScreen() {
     if (error) {
       alert('Error signing out: ' + error.message);
     } else {
-      router.replace('/Login');  // if your file is Login.tsx
+      router.replace('/login');  // if your file is Login.tsx
     }
   };
 

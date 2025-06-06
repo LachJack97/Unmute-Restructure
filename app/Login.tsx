@@ -141,7 +141,7 @@ export default function LoginScreen() {
 
         <View style={styles.switchContainer}>
           <Text style={styles.switchText}>Don’t have an account?</Text>
-          <Pressable onPress={() => router.push('/Register')}>
+          <Pressable onPress={() => router.push('/register')}>
             <Text style={styles.switchLink}> Sign Up</Text>
           </Pressable>
         </View>

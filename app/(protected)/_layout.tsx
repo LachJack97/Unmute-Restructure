@@ -14,7 +14,7 @@ export default function ProtectedLayout({ children }: ProtectedLayoutProps) {
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (!session) {
-        router.replace("/Login");
+        router.replace("/login");
       }
       setChecking(false);
     });

@@ -103,7 +103,7 @@ export default function RegisterScreen() {
 
         <View style={styles.switchContainer}>
           <Text style={styles.switchText}>Already have an account?</Text>
-          <Pressable onPress={() => router.push('/Login')}>
+          <Pressable onPress={() => router.push('/login')}>
             <Text style={styles.switchLink}> Log In</Text>
           </Pressable>
         </View>
