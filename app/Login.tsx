@@ -30,16 +30,16 @@ export default function LoginScreen() {
     const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
       console.log("Auth state change event:", _event, "Session:", session); // <-- Added log
       if (session && session.user) {
-        router.replace('/Chat'); // Adjust the path to your protected screen
+        router.replace('/chat'); // Adjust the path to your protected screen
       }
     });
 
     // Also check on mount
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      console.log("Session on mount:", session); // <-- Added log
-      if (session && session.user) {
-        router.replace('/Chat'); // Adjust the path to your protected screen
-      }
+      supabase.auth.getSession().then(({ data: { session } }) => {
+        console.log("Session on mount:", session); // <-- Added log
+        if (session && session.user) {
+          router.replace('/chat'); // Adjust the path to your protected screen
+        }
     });
 
     return () => {
@@ -64,7 +64,7 @@ export default function LoginScreen() {
       alert(error.message);
     } else {
       // On success, navigate to the protected chat/home screen
-      router.replace('/Chat'); // Adjust the path to your protected screen
+      router.replace('/chat'); // Adjust the path to your protected screen
     }
   };
 

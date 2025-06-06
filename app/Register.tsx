@@ -26,7 +26,7 @@ export default function RegisterScreen() {
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session && session.user) {
-        router.replace('/Chat'); // Adjust the path to your protected screen
+        router.replace('/chat'); // Adjust the path to your protected screen
       }
     });
   }, [router]);
@@ -52,7 +52,7 @@ export default function RegisterScreen() {
       alert(error.message);
     } else {
       // Optionally: inform the user to check their email for confirmation
-      router.replace('/Chat'); // Redirect to Chat or another screen after successful sign up');
+        router.replace('/chat'); // Redirect to Chat or another screen after successful sign up');
     }
   };
 
